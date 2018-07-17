@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import FontAwesome from "react-fontawesome";
 
 class SignUp extends React.Component {
   state = {
@@ -51,33 +52,43 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit} className="form form-signup">
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="text"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="email">password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="username">username</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <input type="submit" value="Valider" />
-      </form>
+      <div className="container">
+        <div>
+          <h2>Pourquoi créer un compte ?</h2>
+        </div>
+        <div>
+          <h2>Créez un compte</h2>
+          <hr />
+          <form onSubmit={this.onSubmit} className="form form-signup">
+            <label htmlFor="username">Pseudo</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+            <label htmlFor="email">Adresse Email</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+            <label htmlFor="email">Mot de passe</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+
+            <input type="submit" value="Créer mon Compte Personnel" />
+          </form>
+        </div>
+      </div>
     );
   }
 }

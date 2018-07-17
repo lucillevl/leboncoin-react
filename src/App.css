@@ -1,3 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 1024px;
+  margin: 20px auto;
+  -webkit-box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+  box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -21,6 +30,53 @@ textarea {
   padding: 0;
 }
 
-.nav-list > li {
-  padding-right: 10px;
+#logo {
+  color: white;
+}
+
+header {
+  background-color: #f56b2a;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-right: 1px solid white;
+  border-left: 2px solid white;
+  padding: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-right: 2px solid white;
+  border-left: 1px solid white;
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+}
+
+ul {
+  align-items: center;
+}
+
+hr {
+  border-color: #f56b2a;
+}
+
+input {
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4183d7;
+  color: white;
+  font-size: 15px;
+  border: none;
 }
