@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./containers/Home";
 import SignUp from "./containers/SignUp";
 import LogIn from "./containers/LogIn";
+import Publish from "./containers/Publish";
 import Profile from "./containers/Profile";
 import Offer from "./containers/Offer";
 import Header from "./components/Header";
@@ -60,6 +61,10 @@ class App extends Component {
             render={props => (
               <LogIn {...props} user={user} setUser={this.setUser} />
             )}
+          />
+          <Route
+            path="/publish"
+            render={props => <Publish {...props} user={user} />}
           />
           <Route
             path="/profile/:id"

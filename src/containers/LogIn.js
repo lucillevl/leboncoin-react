@@ -43,7 +43,9 @@ class LogIn extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <form onSubmit={this.handleSubmit}>
+        <h1 className="center">Connexion</h1>
+        <hr />
+        <form onSubmit={this.handleSubmit} className="form form-login">
           <label htmlFor="email">Adresse email</label>
           <input
             id="email"

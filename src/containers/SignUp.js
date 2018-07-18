@@ -1,6 +1,10 @@
 import React from "react";
 import axios from "axios";
-import FontAwesome from "react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faEye, faBell } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faEye, faClock, faBell);
 
 class SignUp extends React.Component {
   state = {
@@ -55,9 +59,41 @@ class SignUp extends React.Component {
       <div className="container">
         <div>
           <h2>Pourquoi créer un compte ?</h2>
+
+          <div className="flex">
+            <FontAwesomeIcon icon="clock" />
+            <div className="why">
+              <p className="bold">Gagner du temps</p>
+              <p>
+                Publiez vos annonces rapidement, avec vos informations
+                pré-remplies chaque fois que vous souhaitez déposer une nouvelle
+                annonce.
+              </p>
+            </div>
+          </div>
+          <div className="flex">
+            <FontAwesomeIcon icon="bell" />
+            <div className="why">
+              <p className="bold">Soyez les premiers informés</p>
+              <p>
+                Créez des alertes Immo ou Emploi et ne manquez jamais l'annonce
+                qui vous intéresse.
+              </p>{" "}
+            </div>
+          </div>
+          <div className="flex">
+            <FontAwesomeIcon icon="eye" />
+            <div className="why">
+              <p className="bold">Visibilité</p>
+              <p>
+                Suivez les statistiques de vos annonces (nombre de fois où votre
+                annonce a été vue, nombre de contacts reçus).
+              </p>{" "}
+            </div>
+          </div>
         </div>
         <div>
-          <h2>Créez un compte</h2>
+          <h2 className="center">Créez un compte</h2>
           <hr />
           <form onSubmit={this.onSubmit} className="form form-signup">
             <label htmlFor="username">Pseudo</label>

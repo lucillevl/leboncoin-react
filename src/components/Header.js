@@ -32,7 +32,11 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <h1 id="logo">leboncoin</h1>
+        <div className="flex lin-st">
+          <h1 id="logo">leboncoin</h1>
+          <NavLink to="/publish">DEPOSER UNE ANNONCE</NavLink>
+          <NavLink to="/">OFFRES</NavLink>
+        </div>
         <ul className="nav-list">
           <li>
             <NavLink to="/">Home</NavLink>
