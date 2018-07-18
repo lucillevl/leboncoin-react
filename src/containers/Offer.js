@@ -16,6 +16,10 @@ class Offer extends React.Component {
     created: ""
   };
 
+  showNum = event => {
+    event.target.style.display = "none";
+    document.getElementById("num").innerHTML = this.state.creator.account.phone;
+  };
   render() {
     return (
       <div className="flex flex-s-c">
@@ -36,7 +40,10 @@ class Offer extends React.Component {
             <div className="profil-picture" />
             <p className="bold">{this.state.creator.account.username}</p>
           </div>
-          <button className="button-number">Voir le numéro</button>
+          <button className="button-number" onClick={this.showNum}>
+            Voir le numéro
+          </button>
+          <div id="num" />
         </div>
       </div>
     );
