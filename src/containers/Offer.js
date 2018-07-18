@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import DetailAnnonce from "../components/DetailAnnonce";
 class Offer extends React.Component {
   state = {
     _id: "",
@@ -16,36 +17,15 @@ class Offer extends React.Component {
     created: ""
   };
 
-  showNum = event => {
-    event.target.style.display = "none";
-    document.getElementById("num").innerHTML = this.state.creator.account.phone;
-  };
   render() {
     return (
-      <div className="flex flex-s-c">
-        <div className="offer-details">
-          <div className="card">
-            <div className="picture-details-annonce" />
-            <div className="pad-10">
-              <h1>{this.state.title}</h1>
-
-              <p className="price-annonce">{this.state.price} €</p>
-            </div>
-          </div>
-          <p className="bold">Description</p>
-          <p>{this.state.description}</p>
-        </div>
-        <div className="card detail-author pad-10 flex flex-col flex-c-c">
-          <div className="flex flex-c-c marg-bot-30">
-            <div className="profil-picture" />
-            <p className="bold">{this.state.creator.account.username}</p>
-          </div>
-          <button className="button-number" onClick={this.showNum}>
-            Voir le numéro
-          </button>
-          <div id="num" />
-        </div>
-      </div>
+      <DetailAnnonce
+        title={this.state.title}
+        description={this.state.description}
+        price={this.state.price}
+        username={this.state.creator.account.username}
+        phone={this.state.creator.account.phone}
+      />
     );
   }
 
