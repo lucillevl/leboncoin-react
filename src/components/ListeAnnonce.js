@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class ListeAnnonce extends React.Component {
   render() {
     return (
-      <div key={this.props.id} className="annonce">
+      <div key={this.props.id} className="annonce pad-10">
         <div className="picture" />
         <div className="text-annonce">
           <Link to={"/offer/" + this.props.id} className="title-annonce">

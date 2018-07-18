@@ -17,7 +17,29 @@ class Offer extends React.Component {
   };
 
   render() {
-    return <h2>offer id: {this.props.match.params.id}</h2>;
+    return (
+      <div className="flex flex-s-c">
+        <div className="offer-details">
+          <div className="card">
+            <div className="picture-details-annonce" />
+            <div className="pad-10">
+              <h1>{this.state.title}</h1>
+
+              <p className="price-annonce">{this.state.price} €</p>
+            </div>
+          </div>
+          <p className="bold">Description</p>
+          <p>{this.state.description}</p>
+        </div>
+        <div className="card detail-author pad-10 flex flex-col flex-c-c">
+          <div className="flex flex-c-c marg-bot-30">
+            <div className="profil-picture" />
+            <p className="bold">{this.state.creator.account.username}</p>
+          </div>
+          <button className="button-number">Voir le numéro</button>
+        </div>
+      </div>
+    );
   }
 
   componentDidMount() {

@@ -32,7 +32,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className="flex lin-st">
+        <div className="flex flex-a-c lin-st">
           <h1 id="logo">leboncoin</h1>
           <NavLink to="/publish">DEPOSER UNE ANNONCE</NavLink>
           <NavLink to="/">OFFRES</NavLink>

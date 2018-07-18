@@ -18,9 +18,25 @@
 
 .flex {
   display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-a-c {
   align-items: center;
   justify-content: space-around;
 }
+.flex-s-c {
+  align-items: flex-start;
+  justify-content: center;
+}
+.flex-c-c {
+  align-items: center;
+  justify-content: center;
+}
+
 .why {
   width: 400px;
 }
@@ -140,7 +156,7 @@ input[type="submit"] {
   background-color: #666666;
   color: white;
   margin: 0;
-  padding: 10px;
+
   font-size: 16px;
 }
 
@@ -154,7 +170,6 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
-  padding: 10px;
   height: 120px;
 }
 
@@ -178,4 +193,52 @@ input[type="submit"] {
 
 .text-annonce {
   margin-left: 30px;
+}
+
+.picture-details-annonce {
+  background-color: #fafafa;
+  width: 100%;
+  height: 400px;
+}
+
+.card {
+  -webkit-box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+  box-shadow: 10px 6px 72px -18px rgba(214, 214, 214, 1);
+}
+
+.card h1 {
+  font-size: 16px;
+}
+
+.offer-details {
+  width: 40%;
+}
+
+.detail-author {
+  width: 300px;
+  height: 150px;
+  margin-left: 30px;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.button-number {
+  background-color: #f56b2a;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.profil-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  margin-right: 10px;
+}
+
+.marg-bot-30 {
+  margin-bottom: 30px;
 }
